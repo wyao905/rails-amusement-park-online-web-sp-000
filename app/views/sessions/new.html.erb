@@ -1,0 +1,7 @@
+<%= form_tag(sessions_path) do %>
+    <%= label_tag 'Username' %>
+    <%= collection_select :user, :name, User.all, :name, :name %><br>
+    <%= label_tag 'Password' %>
+    <%= text_field_tag :password %>
+    <%= submit_tag 'Sign In' %>
+<% end %>
